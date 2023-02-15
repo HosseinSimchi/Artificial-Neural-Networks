@@ -1,0 +1,88 @@
+
+Layer (type)                 Output Shape              Param #   
+=================================================================
+INPUT  (LSTM)                (None, 561, 32)           4352      
+_________________________________________________________________
+HIDDEN 1  (LayerNormalizatio (None, 561, 32)           64        
+_________________________________________________________________
+HIDDEN 2  (Conv1D)           (None, 559, 16)           1552      
+_________________________________________________________________
+HIDDEN 3  (LayerNormalizatio (None, 559, 16)           32        
+_________________________________________________________________
+HIDDEN 4  (Dropout)          (None, 559, 16)           0         
+_________________________________________________________________
+HIDDEN 5  (LSTM)             (None, 559, 32)           6272      
+_________________________________________________________________
+HIDDEN 6  (LayerNormalizatio (None, 559, 32)           64        
+_________________________________________________________________
+HIDDEN 7  (Dropout)          (None, 559, 32)           0         
+_________________________________________________________________
+HIDDEN 8  (Conv1D)           (None, 557, 32)           3104      
+_________________________________________________________________
+HIDDEN 9  (LayerNormalizatio (None, 557, 32)           64        
+_________________________________________________________________
+HIDDEN 10  (Dropout)         (None, 557, 32)           0         
+_________________________________________________________________
+HIDDEN 11  (LSTM)            (None, 32)                8320      
+_________________________________________________________________
+OUTPUT  (Dense)              (None, 7)                 231       
+=================================================================
+Total params: 24,055
+Trainable params: 24,055
+Non-trainable params: 0
+_________________________________________________________________
+None
+WARNING:tensorflow:From C:\Anaconda\lib\site-packages\tensorflow_core\python\ops\math_grad.py:1424: where (from tensorflow.python.ops.array_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use tf.where in 2.0, which has the same broadcast rule as np.where
+WARNING:tensorflow:From C:\Anaconda\lib\site-packages\keras\backend\tensorflow_backend.py:986: The name tf.assign_add is deprecated. Please use tf.compat.v1.assign_add instead.
+
+WARNING:tensorflow:From C:\Anaconda\lib\site-packages\keras\backend\tensorflow_backend.py:973: The name tf.assign is deprecated. Please use tf.compat.v1.assign instead.
+
+WARNING:tensorflow:From C:\Anaconda\lib\site-packages\keras\backend\tensorflow_backend.py:2741: The name tf.Session is deprecated. Please use tf.compat.v1.Session instead.
+
+Train on 5881 samples, validate on 1471 samples
+Epoch 1/15
+WARNING:tensorflow:From C:\Anaconda\lib\site-packages\keras\backend\tensorflow_backend.py:174: The name tf.get_default_session is deprecated. Please use tf.compat.v1.get_default_session instead.
+
+WARNING:tensorflow:From C:\Anaconda\lib\site-packages\keras\backend\tensorflow_backend.py:181: The name tf.ConfigProto is deprecated. Please use tf.compat.v1.ConfigProto instead.
+
+WARNING:tensorflow:From C:\Anaconda\lib\site-packages\keras\backend\tensorflow_backend.py:190: The name tf.global_variables is deprecated. Please use tf.compat.v1.global_variables instead.
+
+WARNING:tensorflow:From C:\Anaconda\lib\site-packages\keras\backend\tensorflow_backend.py:199: The name tf.is_variable_initialized is deprecated. Please use tf.compat.v1.is_variable_initialized instead.
+
+WARNING:tensorflow:From C:\Anaconda\lib\site-packages\keras\backend\tensorflow_backend.py:206: The name tf.variables_initializer is deprecated. Please use tf.compat.v1.variables_initializer instead.
+
+5881/5881 [==============================] - 299s 51ms/step - loss: 1.4503 - acc: 0.3890 - val_loss: 1.0127 - val_acc: 0.5520
+Epoch 2/15
+5881/5881 [==============================] - 309s 52ms/step - loss: 0.9105 - acc: 0.6133 - val_loss: 0.6841 - val_acc: 0.7322
+Epoch 3/15
+5881/5881 [==============================] - 256s 43ms/step - loss: 0.7059 - acc: 0.7213 - val_loss: 0.5643 - val_acc: 0.7777
+Epoch 4/15
+5881/5881 [==============================] - 170s 29ms/step - loss: 0.6189 - acc: 0.7579 - val_loss: 0.6874 - val_acc: 0.6852
+Epoch 5/15
+5881/5881 [==============================] - 184s 31ms/step - loss: 0.5637 - acc: 0.7754 - val_loss: 0.4775 - val_acc: 0.8321
+Epoch 6/15
+5881/5881 [==============================] - 192s 33ms/step - loss: 0.4922 - acc: 0.8055 - val_loss: 0.4681 - val_acc: 0.8294
+Epoch 7/15
+5881/5881 [==============================] - 207s 35ms/step - loss: 0.4796 - acc: 0.8138 - val_loss: 0.4286 - val_acc: 0.8511
+Epoch 8/15
+5881/5881 [==============================] - 217s 37ms/step - loss: 0.4575 - acc: 0.8196 - val_loss: 0.4272 - val_acc: 0.8355
+Epoch 9/15
+5881/5881 [==============================] - 236s 40ms/step - loss: 0.4413 - acc: 0.8267 - val_loss: 0.4097 - val_acc: 0.8504
+Epoch 10/15
+5881/5881 [==============================] - 257s 44ms/step - loss: 0.4096 - acc: 0.8419 - val_loss: 0.3802 - val_acc: 0.8647
+Epoch 11/15
+5881/5881 [==============================] - 272s 46ms/step - loss: 0.3906 - acc: 0.8420 - val_loss: 0.3606 - val_acc: 0.8620
+Epoch 12/15
+5881/5881 [==============================] - 296s 50ms/step - loss: 0.3702 - acc: 0.8517 - val_loss: 0.4033 - val_acc: 0.8382
+Epoch 13/15
+5881/5881 [==============================] - 308s 52ms/step - loss: 0.3659 - acc: 0.8539 - val_loss: 0.3765 - val_acc: 0.8450
+Epoch 14/15
+5881/5881 [==============================] - 328s 56ms/step - loss: 0.3535 - acc: 0.8589 - val_loss: 0.4552 - val_acc: 0.8192
+Epoch 15/15
+5881/5881 [==============================] - 352s 60ms/step - loss: 0.3489 - acc: 0.8609 - val_loss: 0.3680 - val_acc: 0.8613
+Total training time :  1:04:45.400692
+2947/2947 [==============================] - 62s 21ms/step
+0.45884025934230366
+0.8238887003732609
